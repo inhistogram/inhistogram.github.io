@@ -40,7 +40,7 @@
         <section>
             <h1>inHistogram</h1>
             <p>&nbsp;</p>
-            <h4>Interactive Data Exploration using d3.js with a Websocket Bridge (locally ot through SSH cloud.</h4>
+            <h4>Interactive Data Exploration using d3.js with a Websocket Bridge (locally ot through SSH cloud)</h4>
             <p>&nbsp;</p>
             <p>
                 <ul>
@@ -63,18 +63,21 @@
             </p>
             <p>&nbsp;</p>
             <p>
-                They do not allow you to analyze important and intersting amounts of data (i.e. 3GB of data).
+                They do not allow you to analyze important and interesting amounts of data (i.e. 3GB of data).
             </p>
         </section>
         
         <section>
-            <img typeof="foaf:Image" src="http://webfest.web.cern.ch/sites/webfest.web.cern.ch/files/styles/large/public/inhistogramConcept.png?itok=Zz3vHf4t" width="480" height="480" alt="">
+            <img typeof="foaf:Image" src="http://webfest.web.cern.ch/sites/webfest.web.cern.ch/files/styles/large/public/inhistogramConcept.png?itok=Zz3vHf4t" width="700" height="700" alt="">
         </section>
 
         <section data-background="#FF8B8B">
             <h2>Therefore...</h2>
             <p>
-                We have got an interface on top of tornado (WSGI) to do all the computations locally and display the results on the browser making use of d3.js
+                We have got an interface on top of Tornado (using Websockets and HTTP APIs) to do all the computations locally and display the results on the browser making use of d3.js
+            </p>
+            <p>
+                You act over the GUI on the browser and analysis in rapidly done by powerful data analysis libraries (i.e. numpy and ROOT)
             </p>
         </section>
 
@@ -83,10 +86,10 @@
                 We have a set of histograms which allow the users to select a sub-set of the histogram and see how the data changes.
             </p>
             <p>
-                We don’t make use of a database as we allow users to create their own scripts.
+                Creating a database is tiring and not flexible  enough for statistical data analyses.
             </p>
             <p>
-                The user can analyse large datasets, locally.
+                The user can analyse large datasets, as easy as: inhistogram LHCbData.root
             </p>
         </section>
 
