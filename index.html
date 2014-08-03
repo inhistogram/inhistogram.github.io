@@ -43,50 +43,56 @@
             <h4>Interactive histograms using d3.js computed on your local machine or via a cloud instance.</h4>
             <p>&nbsp;</p>
             <p>
-                <small>by Pablo de Castro, Xavier Valls, Pablo Jiménez, Nitin Agarwal, Daniel Lemon</small>
+                <ul>
+                    <li>Pablo de Castro</li>
+                    <li>Nitin Agarwal</li>
+                    <li>Xavier Valls</li>
+                    <li>Pablo Jiménez</li>
+                    <li>Daniel Lemon</li>
+                </ul>
             </p>
         </section>
 
         <section data-transition="zoom">
-            <h2>How is this different to anything else?</h2>
+            <h2>How is it different?</h2>
             <p>
-                In the past, we would use dc.js and/or crossfilter.js which allows you to do all the computations in the web browser;
+                In past, we used dc.js / crossfilter.js which allows you to do all the computations on the browser;
             </p>
             <p>&nbsp;</p>
             <p>
-                However it is not great if you want to analyze huge amounts of data (e.g. 3 GB of data)
+                However, it does not allow you to analyze huge amounts of data (3GB of data).
             </p>
         </section>
 
         <section data-background="#FF8B8B">
             <h2>Therefore...</h2>
             <p>
-                We built an interface on top of tornado (python web server) and do all the computations locally, but show the results on a local site that presents the data using d3.js
+                We have got an interface on top of tornado (WSGI) to do all the computations locally and display the results on the browser making use of d3.js
             </p>
         </section>
 
         <section data-background="#F79747">
             <p>
-                We have a set of histograms and we allow users to select a sub-set of the histogram and see how the data changes.
+                We have a set of histograms which allow the users to select a sub-set of the histogram and see how the data changes.
             </p>
             <p>
-                We don’t use a database because we allow users to create their own scripts
+                We don’t make use of a database as we allow users to create their own scripts.
             </p>
             <p>
-                We allow you to work on high volume data, locally.
+                The user can analyse large datasets, locally.
             </p>
         </section>
 
         <section data-background="#A8E0D1">
             <h2>Status of the project</h2>
-            <p>Over the weekend, we created a working prototype to show that our idea is possible.</p>
-            <p>This is a complex architecture that is built on top of tornado and uses web sockets to communicate with the client browser, and d3.js for the visualization of the histograms.</p>
+            <p>Over the weekend, we created a working prototype to show how our idea is possible.</p>
+            <p> This is a complex architecture built on top of tornado making use of web sockets for communication with the browser and d3.js for the visualizing histograms.</p>
         </section>
 
         <section data-background="#C5B2EC">
-            <p>Currently we have the built the architecture to support Numpy files, however we can easily integrate ROOT.</p>
-            <p>The inhistogram.py file loads the tornado server, there we have a working interactive front end view that displays the Numpy data as histograms, we will extend this to include any other type of visualization (bar, 3D histogram, tree, graphs, time-series etc.).</p>
-            <p>A user can select a sub-set or different variables of the histogram from the site, and using web sockets this will update the histograms with the computed data.</p>
+            <p>Currently we have built the architecture to support Numpy files, however we can easily integrate ROOT.</p>
+            <p>The inhistogram.py file loads the tornado server with a user interactive interface which displays the data as histograms, we can extend this to include any other type of visualization (bar, 3D histogram, tree, graphs, time-series etc.).</p>
+            <p>A user can select a sub-set or different variables of the histogram to see the updated histograms after the computation of the data.</p>
         </section>
 
         <section>
